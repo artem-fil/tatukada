@@ -1,0 +1,20 @@
+.app
+  +size(100%)
+  +flex-left-center
+  background: url(../img/design/bg-mobile-app.jpg) no-repeat center
+  background-size: cover
+  .wrapper
+    text-align: center
+    width: 40%
+    margin-left: 2.5em
+  &__title
+    +text-m-heading
+    text-transform: capitalize
+    margin-bottom: .95em
+  &__link
+    text-transform: capitalize
+    text-decoration: none
+    color: $color-text-primary
+    +text-common-link
+    border-bottom: 2px solid $color-text-primary
+    padding-bottom: 5px

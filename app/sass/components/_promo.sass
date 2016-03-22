@@ -1,0 +1,27 @@
+.promo
+  +size(100%)
+  position: relative
+  background-color: grey
+  background: url(../img/design/bg-special-offer.jpg) no-repeat center
+  background-size: cover
+  &-info
+    position: absolute
+    left: 36px
+    bottom: 60px
+    width: 38%
+    &__discount
+      +text-discount
+      display: inline-block
+      margin-bottom: 24px
+    &__heading
+      +text-xl-heading
+      margin-bottom: 24px
+    &__description
+      +text-regular
+      margin-bottom: 18px
+    &__link
+      +text-common-link
+      border-bottom: 2px solid $color-text-primary
+      padding-bottom: 5px
+      text-transform: capitalize
+      display: inline-block

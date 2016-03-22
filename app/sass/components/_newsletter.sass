@@ -1,0 +1,38 @@
+.newsletter
+  +size(100%)
+  background: url(../img/design/border.png) top repeat-x,  url(../img/design/border.png) bottom repeat-x
+  background-color: $color-brand-primary
+  +flex-centering
+  .wrapper
+    width: 80%
+  p
+    position: relative
+    label
+      position: absolute
+      display: block
+      right: 10px
+      top: 10px
+      +size(26px, 21px)
+      background: url(../img/design/sprite.png) no-repeat
+      background-position: -39px -65px
+  &__heading
+    +text-m-heading
+    text-transform: capitalize
+    text-align: center
+    margin-bottom: 1.5em
+  &__email
+    box-sizing: border-box
+    +size(100%, 40px)
+    border: 1px solid $color-text-primary
+    background-color: $color-brand-primary
+    padding: 0
+    margin: 0
+    line-height: 40px
+    padding-left: 15px
+    color: $color-text-primary
+  input::-webkit-input-placeholder
+      color: $color-text-primary
+      font: 16px/40px $font-family-lato
+  input::-moz-placeholder
+      color: $color-text-primary
+      font: 16px/40px $font-family-lato

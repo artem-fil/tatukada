@@ -1,0 +1,27 @@
+.logo
+  +size(100%)
+  background-color: $color-bg-alt
+  +flex-centering
+  border-top: 2px solid $color-brand-primary
+  position: relative
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    +size(50%, 2px)
+    background-color: $color-brand-secondary
+    left: 0
+    top: -2px
+  &__title
+    position: relative
+    text-align: center
+    +text-l-heading
+    text-transform: capitalize
+    color: $color-text-secondary
+  &__slogan
+    position: absolute
+    right: 0
+    top: 100%
+    color: $color-text-secondary
+    text-transform: lowercase
+    font: .4em/1em $font-family-lato

@@ -1,0 +1,29 @@
+.offer
+  +size(100%)
+  background: $color-bg-alt url(../img/design/bg-featured-offer.jpg) no-repeat left center
+  +flex-right-center
+  .wrapper
+    width: 30%
+    margin-right: 50px
+    ul
+      list-style-type: disc
+      margin: 12px 0 12px 25px
+      li
+        span
+          display: inline-block
+          width: 50px
+  &__title
+    margin-bottom: 20px
+    text-transform: capitalize
+    color: $color-text-alt
+    +text-m-heading
+  &__caption
+    display: inline-block
+    margin-bottom: 35px
+    color: $color-text-alt
+    font: 1.4em $font-family-lato
+    font-weight: 900
+    text-transform: capitalize
+  &__description
+    color: $color-text-alt
+    +text-regular

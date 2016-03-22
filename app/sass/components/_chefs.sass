@@ -1,0 +1,35 @@
+.chefs
+  +size(100%)
+  background-color: $color-bg-alt
+  border-top: 1px solid transparent
+  position: relative
+  &-info
+    color: $color-text-alt
+    margin-left: 30px
+    margin-top: 120px
+    width: 200px
+  &__title
+    +text-m-heading
+    color: $color-text-alt
+    text-align: center
+    text-transform: capitalize
+    margin-top: .95em
+  &__name
+    display: inline-block
+    text-transform: capitalize
+    font: 2.4em $font-family-paytone
+    margin-bottom: .15em
+  &__role
+    display: inline-block
+    +text-regular
+    font-weight: 900
+    text-transform: capitalize
+    margin-bottom: 1em
+  &__text
+    +text-regular
+  &__photo
+    position: absolute
+    bottom: 0
+    right: 0
+    img
+      display: block

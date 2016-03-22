@@ -1,0 +1,33 @@
+.gallery
+  +size(100%)
+  &-slider
+    +size(100%)
+    position: relative
+    overflow: hidden
+    &__btn
+      vertical-align: middle
+      display: inline-block
+      border: none
+      cursor: pointer
+      +size(16px)
+      background: none
+      background-color: $color-bg-alt
+      border-radius: 50%
+      margin-right: 5px
+      transform: scale(.625)
+      &--active
+        transform: scale(1)
+        background-color: $color-brand-primary
+    &-controls
+      text-align: center
+      position: absolute
+      +size(100%, 16px)
+      bottom: 15px
+      font-size: 0
+    .slides
+      +size(600%, 100%)
+      li
+        float: left
+        img
+          display: block
+          +size(100%)

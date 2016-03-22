@@ -1,0 +1,39 @@
+=clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+=size($width, $height: $width)
+  width: $width
+  height: $height
+
+=text-discount
+  font: 10.8em/.75em $font-family-miltonian
+=text-xl-heading
+  font: 5.4em/.86em $font-family-paytone
+=text-l-heading
+  font: 4em/1em $font-family-paytone
+=text-m-heading
+  font: 3.6em/1em $font-family-paytone
+=text-common-link
+  font: 1.8em $font-family-paytone
+=text-regular
+  font: 1.6em/1.5em $font-family-lato
+
+=flex-centering
+  display: flex
+  justify-content: center
+  align-items: center
+=flex-left-center
+  display: flex
+  justify-content: flex-start
+  align-items: center
+=flex-right-center
+  display: flex
+  justify-content: flex-end
+  align-items: center
+=flex-bottom
+  display: flex
+  justify-content: flex-start
+  align-items: flex-end

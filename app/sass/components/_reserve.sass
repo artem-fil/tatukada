@@ -1,0 +1,53 @@
+.reserve
+  +size(100%)
+  background: $color-brand-secondary url(../img/design/bg-reserve-2.png) no-repeat left bottom
+  +flex-centering
+  .wrapper
+    width: 85%
+  &__title
+      +text-m-heading
+      text-transform: capitalize
+      text-align: center
+  form
+    margin-top: 60px
+    p
+      height: 36px
+      position: relative
+      margin-bottom: 1.5em
+  input
+    float: right
+    box-sizing: border-box
+    +size(180px, 36px)
+    line-height: 36px
+    padding: 10px
+    color: $color-text-primary
+    border: 1px solid $color-text-primary
+    background-color: $color-brand-secondary
+    &::-webkit-input-placeholder
+      color: $color-text-primary
+      font: 16px/36px $font-family-lato
+    &::-moz-placeholder
+      color: $color-text-primary
+      font: 16px/36px $font-family-lato
+    & + label
+      position: absolute
+      top: 8px
+      right: 8px
+  &__input-date + label
+    +size(20px)
+    background: url(../img/design/sprite.png) no-repeat
+    background-position: 0 -1px
+  &__input-time + label
+    background: url(../img/design/sprite.png) no-repeat
+    +size(22px, 22px)
+    background-position: -20px 0
+  &__submit
+    +text-common-link
+    margin-top: 12px
+    float: right
+    padding: 0 0 5px 0
+    border: none
+    color: $color-text-primary
+    border-bottom: 2px solid $color-text-primary
+    text-transform: capitalize
+    background: none

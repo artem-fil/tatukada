@@ -1,0 +1,19 @@
+.delivery
+  +size(100%)
+  background-color: $color-brand-primary
+  +flex-centering
+  &__title
+    +text-m-heading
+    border-bottom: 2px solid $color-bg-alt
+    padding-bottom: 16px
+    margin-bottom: 16px
+  &__phone
+    position: relative
+    padding-left: 25px
+    font: 2.8em/1em $font-family-paytone
+    &:before
+      +size(16px, 26px)
+      position: absolute
+      left: 0
+      content: ""
+      background: url(../img/design/sprite.png) no-repeat -75px -1px
