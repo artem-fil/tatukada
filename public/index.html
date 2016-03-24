@@ -7,8 +7,8 @@
     <meta name="description" content="tatukada">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/design/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/design/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/design/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="img/design/favicon2.ico" type="image/x-icon">
     <script src="js/jquery-2.2.2.min/index.js"></script>
     <script src="js/main.js"></script>
   </head>
@@ -48,23 +48,74 @@
         <div class="col-2-3">
           <div class="cell">
             <div class="offer">
-              <div class="wrapper">
-                <h2 class="offer__title">idly & vada</h2><span class="offer__caption">&#91; by master chef &#93;</span>
-                <p class="offer__description">Nec sagittis sem nibh id elit. Duis sed odio tellus a odio tincidunt auctor.</p>
-                <ul class="offer__description">
-                  <li> <span>1 tsp</span>- &nbsp;Mulakupodi</li>
-                  <li> <span>4 pcs.</span>- &nbsp;Thakkali</li>
-                  <li> <span>2 kg</span>- &nbsp;Savala</li>
+              <div class="offer-image">
+                <ul class="offer-image-list">
+                  <li class="offer-image-list__item"><img src="img/content/offer-1.jpg"></li>
+                  <li class="offer-image-list__item left-hidden"><img src="img/content/offer-2.jpg"></li>
+                  <li class="offer-image-list__item left-hidden"><img src="img/content/offer-3.jpg"></li>
+                  <li class="offer-image-list__item left-hidden"><img src="img/content/offer-4.jpg"></li>
                 </ul>
-                <p class="offer__description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+              </div>
+              <div class="offer-text">
+                <ul class="offer-text-list">
+                  <li class="offer-text-list__item">
+                    <h2 class="offer__title">vada & idly</h2><span class="offer__caption">&#91; by iron man &#93;</span>
+                    <p class="offer__description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                    <ul class="offer__description">
+                      <li> <span>1 tsp</span>- &nbsp;Mulakupodi</li>
+                      <li> <span>4 pcs.</span>- &nbsp;Thakkali</li>
+                      <li> <span>2 kg</span>- &nbsp;Savala</li>
+                    </ul>
+                    <p class="offer__description">Nec sagittis sem nibh id elit. Duis sed odio tellus a odio tincidunt auctor.</p>
+                  </li>
+                  <li class="offer-text-list__item hidden">
+                    <h2 class="offer__title">idly & vada</h2><span class="offer__caption">&#91; by master chef &#93;</span>
+                    <p class="offer__description">Nec sagittis sem nibh id elit. Duis sed odio tellus a odio tincidunt auctor. Nec sagittis sem nibh id elit. Duis sed odio tellus a odio tincidunt auctor.</p>
+                    <ul class="offer__description">
+                      <li> <span>6 tsp</span>- &nbsp;Mulakupodi</li>
+                      <li> <span>4 pcs.</span>- &nbsp;Savala</li>
+                      <li> <span>8 kg</span>- &nbsp;Thakkali</li>
+                    </ul>
+                    <p class="offer__description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                  </li>
+                  <li class="offer-text-list__item hidden">
+                    <h2 class="offer__title">idly & vada 3</h2><span class="offer__caption">&#91; by master chef &#93;</span>
+                    <p class="offer__description">Nec sagittis sem nibh id elit. Duis sed odio tellus a odio tincidunt auctor.</p>
+                    <ul class="offer__description">
+                      <li> <span>1 tsp</span>- &nbsp;Mulakupodi</li>
+                      <li> <span>4 pcs.</span>- &nbsp;Thakkali</li>
+                      <li> <span>2 kg</span>- &nbsp;Savala</li>
+                    </ul>
+                    <p class="offer__description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                  </li>
+                  <li class="offer-text-list__item hidden">
+                    <h2 class="offer__title">idly & vada 4</h2><span class="offer__caption">&#91; by master chef &#93;</span>
+                    <p class="offer__description">Nec sagittis sem nibh id elit. Duis sed odio tellus a odio tincidunt auctor.</p>
+                    <ul class="offer__description">
+                      <li> <span>1 tsp</span>- &nbsp;Mulakupodi</li>
+                      <li> <span>4 pcs.</span>- &nbsp;Thakkali</li>
+                      <li> <span>2 kg</span>- &nbsp;Savala</li>
+                    </ul>
+                    <p class="offer__description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="offer-controls">
+                <button class="offer-controls__btn">&lt;</button>
+                <button class="offer-controls__btn">&gt;</button>
               </div>
             </div>
           </div>
           <div class="cell">
             <div class="video">
-              <div class="wrapper">
-                <button class="video__play"></button>
-                <h2 class="video__title">watch tatukada video</h2>
+              <video id="video" controls>
+                <source src="video/video.webm" type="video/webm">
+              </video>
+              <div class="video-overlay">
+                <div class="wrapper">
+                  <button id="play__btn" class="video__play"></button>
+                  <h2 class="video__title">watch tatukada video</h2>
+                </div>
               </div>
             </div>
           </div>
@@ -93,13 +144,51 @@
           <div class="cell">
             <div class="recipies">
               <h2 class="recipies__title">daily recipies</h2>
+              <div class="wrapper">
+                <ul>
+                  <li><img src="img/content/recipe-1.png">
+                    <h3>Njayarazhchat</h3>
+                    <p>Gravida nibh velit aucttiror aliquet. Aenean sollicitudin</p>
+                  </li>
+                  <li><img src="img/content/recipe-2.png">
+                    <h3>Thinkalazhcha</h3>
+                    <p>Gravida nibh velit aucttiror aliquet. Aenean sollicitudin</p>
+                  </li>
+                  <li><img src="img/content/recipe-3.png">
+                    <h3>Budhanazhcha</h3>
+                    <p>Gravida nibh velit aucttiror aliquet. Aenean sollicitudin</p>
+                  </li>
+                  <li> <img src="img/content/recipe-4.png">
+                    <h3>Chovvazhcha</h3>
+                    <p>Gravida nibh velit aucttiror aliquet. Aenean sollicitudin</p>
+                  </li>
+                  <li><img src="img/content/recipe-5.png">
+                    <h3>Hanthinlazchat</h3>
+                    <p>Gravida nibh velit aucttiror aliquet. Aenean sollicitudin</p>
+                  </li>
+                  <li><img src="img/content/recipe-6.png">
+                    <h3>Vazkalcha</h3>
+                    <p>Gravida nibh velit aucttiror aliquet. Aenean sollicitudin</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="cell-half">
             <div class="comments">
               <div class="wrapper">
-                <p class="comments__text">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Duis sed odio</p>
-                <div class="comments-author"><img src="img/content/avatar-2.jpg" class="comments-author__avatar"><span class="comments-author__name">Charlize Theron, AU</span></div>
+                <div id="card" class="card">
+                  <div class="card-front"><span class="comments__mark">&ldquo;</span>
+                    <p class="comments__text">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Duis sed odio
+                      <div class="comments-author"><img src="img/content/avatar-3.jpg" class="comments-author__avatar"><span class="comments-author__name">Charlize Theron, AU</span></div>
+                    </p>
+                  </div>
+                  <div class="card-back"><span class="comments__mark">&ldquo;</span>
+                    <p class="comments__text">Huevos ponimatos? Aenean sollicitudin, lorem quis bibendum auctor, consequat ipsum.
+                      <div class="comments-author"><img src="img/content/avatar-5.jpg" class="comments-author__avatar"><span class="comments-author__name">Milla Jovovich, US</span></div>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -130,10 +219,29 @@
           <div class="cell">
             <div class="chefs">
               <h2 class="chefs__title">our chefs</h2>
-              <div class="chefs-info"><span class="chefs__name">josette doe</span><span class="chefs__role">&#91; master chef &#93;</span>
-                <p class="chefs__text">Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec</p>
+              <div class="chefs-info">
+                <ul id="chefs-info-list">
+                  <li class="chefs-info-card"><span class="chefs__name">josette doe</span><br><span class="chefs__role">&#91; master chef &#93;</span>
+                    <p class="chefs__text">Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec</p>
+                  </li>
+                  <li class="chefs-info-card sub-hidden"><span class="chefs__name">constantine constantinople</span><br><span class="chefs__role">&#91; master chef &#93;</span>
+                    <p class="chefs__text">Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec</p>
+                  </li>
+                  <li class="chefs-info-card sub-hidden"><span class="chefs__name">total gay</span><br><span class="chefs__role">&#91; master chef &#93;</span>
+                    <p class="chefs__text">Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec</p>
+                  </li>
+                  <li class="chefs-info-card sub-hidden"><span class="chefs__name">old freak</span><br><span class="chefs__role">&#91; master chef &#93;</span>
+                    <p class="chefs__text">Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec    </p>
+                  </li>
+                </ul>
               </div>
-              <div class="chefs__photo"><img src="img/content/chef-photo-2.png"></div>
+              <div class="chefs-photo">
+                <div class="chefs-photo-container"><img src="img/content/chef-photo-2.png"><img src="img/content/chef-photo-3.png" class="hidden"><img src="img/content/chef-photo-4.png" class="hidden"><img src="img/content/chef-photo-6.png" class="hidden"></div>
+              </div>
+              <div class="chefs-controls">
+                <button class="chefs-controls__btn">&lt;</button>
+                <button class="chefs-controls__btn">&gt;</button>
+              </div>
             </div>
           </div>
         </div>

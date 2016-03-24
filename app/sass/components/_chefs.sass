@@ -1,19 +1,57 @@
 .chefs
   +size(100%)
   background-color: $color-bg-alt
-  border-top: 1px solid transparent
   position: relative
-  &-info
-    color: $color-text-alt
-    margin-left: 30px
-    margin-top: 120px
-    width: 200px
   &__title
     +text-m-heading
+    display: block
     color: $color-text-alt
     text-align: center
     text-transform: capitalize
-    margin-top: .95em
+    padding-top: 32px
+  &-info
+    color: $color-text-alt
+    box-sizing: border-box
+    overflow: hidden
+    width: 240px
+    margin-top: 120px
+    ul
+      min-height: 300px
+      overflow: hidden
+      position: relative
+      li
+        position: absolute
+        padding-left: 30px
+        width: 210px
+
+  &-photo
+    position: absolute
+    right: 0
+    bottom: 0
+    &-container
+      +size(100%)
+      position: relative
+      img
+        position: absolute
+        right: 0
+        bottom: 0
+        display: block
+  &-controls
+    position: absolute
+    left: 15px
+    bottom: 15px
+    &__btn
+      border: none
+      padding: 5px
+      margin-left: 10px
+      background: none
+      color: #d1d1d1
+      cursor: pointer
+      font-size: 25px
+      &:hover
+        color: $color-brand-primary
+      &:active
+        color: $color-brand-primary
   &__name
     display: inline-block
     text-transform: capitalize
@@ -27,9 +65,3 @@
     margin-bottom: 1em
   &__text
     +text-regular
-  &__photo
-    position: absolute
-    bottom: 0
-    right: 0
-    img
-      display: block

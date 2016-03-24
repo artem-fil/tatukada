@@ -1,5 +1,8 @@
 .video
-  .wrapper
-    button.video__play
-    h2.video__title watch tatukada video
+  video#video(controls)
+    source(src="video/video.webm" type="video/webm")
+  .video-overlay
+    .wrapper
+      button#play__btn.video__play
+      h2.video__title watch tatukada video
       

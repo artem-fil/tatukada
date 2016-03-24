@@ -1,23 +1,43 @@
 .comments
   +size(100%)
-  background: url(../img/design/bg-feedback.jpg) no-repeat
-  background-size: cover
   +flex-centering
   .wrapper
-    width: 78%
+    +size(100%)
     position: relative
     text-align: center
-    margin-top: 80px
-    &:before
-      display: block
+  .card
+    +size(100%)
+    position: relative
+    &-back, &-front
       position: absolute
-      content: "\201C"
-      font-size: 15em
-      +size(100%, 50px)
-      top: -.7em
+      top: 0
+      left: 0
+      background: url(../img/design/bg-feedback.jpg) no-repeat
+      background-size: cover
+      +size(100%)
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+      -webkit-transition: -webkit-transform .5s
+      transition: transform .5s
+    &-back
+      -webkit-transform: rotateY(-180deg)
+      transform: rotateY(-180deg)
+    &.flipped .card-front
+      -webkit-transform: rotateY(-180deg)
+      transform: rotateY(-180deg)
+    &.flipped .card-back
+      -webkit-transform: rotateY(0)
+      transform: rotateY(0)
   &__text
     +text-regular
-    margin-bottom: 35px
+    margin-bottom: 30px
+    text-align: center
+    padding-left: 11%
+    padding-right: 11%
+  &__mark
+    height: 120px
+    display: block
+    font: 16em/1.35em sans-serif
   &-author
     +clearfix
     display: inline-block
