@@ -1,16 +1,7 @@
 .comments
-  .wrapper
-    .card#card
-      .card-front
-        span.comments__mark &ldquo;
-        p.comments__text Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Duis sed odio
-          .comments-author
-            img.comments-author__avatar(src="img/content/avatar-3.jpg")
-            span.comments-author__name Charlize Theron, AU
-      .card-back
-        span.comments__mark &ldquo;
-        p.comments__text Huevos ponimatos? Aenean sollicitudin, lorem quis bibendum auctor, consequat ipsum.
-          .comments-author
-            img.comments-author__avatar(src="img/content/avatar-5.jpg")
-            span.comments-author__name Milla Jovovich, US
+  .card#card
+    .card-front
+      +comment('Karen Gillan', 'Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Duis sed odio')        
+    .card-back
+      +comment('Charlize Theron', 'Huevos ponimatos? Aenean sollicitudin, lorem quis bibendum auctor sed odio.')
     

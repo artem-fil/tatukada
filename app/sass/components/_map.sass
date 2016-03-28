@@ -1,0 +1,12 @@
+.map
+  background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=london&zoom=12&scale=false&size=640x320&maptype=roadmap&format=png&visual_refresh=true)
+  +size(100%)
+  position: relative
+  &__pin
+    +size(75px)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    background: $color-bg-alt url(../img/design/i-pin-big.png) no-repeat center center

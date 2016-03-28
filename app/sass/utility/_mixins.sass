@@ -4,6 +4,15 @@
     display: table
     clear: both
 
+=pseudo-pos
+  position: absolute
+  content: ""
+
+=btn
+  background: none
+  border: none
+  cursor: pointer
+
 =size($width, $height: $width)
   width: $width
   height: $height
@@ -16,6 +25,8 @@
   font: 4em/1em $font-family-paytone
 =text-m-heading
   font: 3.6em/1em $font-family-paytone
+=text-sm-heading
+  font: 2.4em $font-family-paytone
 =text-common-link
   font: 1.8em $font-family-paytone
 =text-regular
@@ -40,8 +51,7 @@
 
 =link-hover-effect
   &:after
-    content: ""
-    position: absolute
+    +pseudo-pos
     height: 2px
     background: $color-brand-primary
     width: 0
@@ -49,4 +59,4 @@
     left: 0
   &:hover:after
     width: 100%
-    transition: width .4s
+    transition: width .25s

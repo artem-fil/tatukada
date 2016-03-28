@@ -1,25 +1,25 @@
 .reserve
   +size(100%)
   background: $color-brand-secondary url(../img/design/bg-reserve-2.png) no-repeat left bottom
-  +flex-centering
-  .wrapper
-    width: 85%
+  border-top: 1px solid transparent
+  box-sizing: border-box
   &__title
-      +text-m-heading
-      text-transform: capitalize
-      text-align: center
-  form
-    margin-top: 60px
-    p
-      height: 36px
-      position: relative
-      margin-bottom: 1.5em
-  input
+    +text-m-heading
+    text-transform: capitalize
+    text-align: center
+    margin-top: .8em
+    margin-bottom: 2em
+  &__form
     float: right
+    margin-right: 40px
+    p
+      position: relative
+      margin-bottom: 15px
+  input
     box-sizing: border-box
     +size(180px, 36px)
     line-height: 36px
-    padding: 10px
+    padding: 0 10px
     color: $color-text-primary
     border: 1px solid $color-text-primary
     background-color: $color-brand-secondary
@@ -33,22 +33,23 @@
       position: absolute
       top: 8px
       right: 8px
-  &__input-date + label
+  #input-date + label
     +size(20px)
     background: url(../img/design/sprite.png) no-repeat
     background-position: 0 -1px
-  &__input-time + label
+  #input-time + label
     background: url(../img/design/sprite.png) no-repeat
-    +size(22px, 22px)
+    +size(22px)
     background-position: -20px 0
   &__submit
     position: relative
+    display: inline-block
     +text-common-link
     +link-hover-effect
-    margin-top: 12px
+    margin-top: 10px
     cursor: pointer
     float: right
-    padding: 0 0 5px 0
+    padding-bottom: 5px
     border: none
     color: $color-text-primary
     border-bottom: 2px solid $color-text-primary

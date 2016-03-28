@@ -1,10 +1,8 @@
 .chefs
   +size(100%)
-  background-color: $color-bg-alt
   position: relative
   &__title
     +text-m-heading
-    display: block
     color: $color-text-alt
     text-align: center
     text-transform: capitalize
@@ -13,13 +11,13 @@
     color: $color-text-alt
     box-sizing: border-box
     overflow: hidden
-    width: 240px
+    width: 24em
     margin-top: 120px
-    ul
+    &-list
       min-height: 300px
       overflow: hidden
       position: relative
-      li
+      &-li
         position: absolute
         padding-left: 30px
         width: 210px
@@ -41,16 +39,12 @@
     left: 15px
     bottom: 15px
     &__btn
-      border: none
+      +btn
       padding: 5px
       margin-left: 10px
-      background: none
       color: #d1d1d1
-      cursor: pointer
       font-size: 25px
-      &:hover
-        color: $color-brand-primary
-      &:active
+      &:hover, &:active
         color: $color-brand-primary
   &__name
     display: inline-block

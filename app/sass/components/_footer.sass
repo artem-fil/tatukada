@@ -1,0 +1,50 @@
+.footer
+  +size(100%)
+  background-color: $color-brand-primary
+  &__copyright
+    +text-regular
+    float: right
+    margin-right: 35px
+    line-height: 80px
+    a
+      color: $color-text-primary
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  &-social
+    float: left
+    margin: 28px 0 28px 35px
+    &__link
+      display: inline-block
+      margin-right: 15px
+      line-height: 80px
+      +size(20px)
+      position: relative
+      cursor: pointer
+      &:after
+        display: none
+        position: absolute
+        content: ""
+        +size(100%, 2px)
+        background-color: $color-text-primary
+        bottom: -9px
+      &:hover:after
+        display: block
+      &--fb
+        background: url(../img/design/sprite.png)
+        background-position: -115px -46px
+      &--twitter
+        background: url(../img/design/sprite.png)
+        background-position: -86px -68px
+      &--dribble
+        background: url(../img/design/sprite.png)
+        background-position: -75px -46px
+      &--evernote
+        background: url(../img/design/sprite.png)
+        background-position: -96px -46px
+      &--myspace
+        background: url(../img/design/sprite.png)
+        background-position: -64px -68px
+      &--youtube
+        background: url(../img/design/sprite.png)
+        background-position: -108px -68px

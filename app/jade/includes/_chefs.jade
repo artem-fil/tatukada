@@ -1,27 +1,15 @@
 .chefs
   h2.chefs__title our chefs
   .chefs-info
-    ul#chefs-info-list
-      li.chefs-info-card
-        span.chefs__name josette doe
-        br
-        span.chefs__role &#91; master chef &#93;
-        p.chefs__text Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec
-      li.chefs-info-card.sub-hidden
-        span.chefs__name constantine constantinople
-        br
-        span.chefs__role &#91; master chef &#93;
-        p.chefs__text Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec
-      li.chefs-info-card.sub-hidden
-        span.chefs__name total gay
-        br
-        span.chefs__role &#91; master chef &#93;
-        p.chefs__text Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec
-      li.chefs-info-card.sub-hidden
-        span.chefs__name old freak
-        br
-        span.chefs__role &#91; master chef &#93;
-        p.chefs__text Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec    
+    ul#chefs-info-list.chefs-info-list
+      li.chefs-info-list-li
+        +chef-card('josette doe', 'master chef', 'Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec')
+      li.chefs-info-list-li.hidden
+        +chef-card('john snow', 'chef №2', 'Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec')
+      li.chefs-info-list-li.hidden
+        +chef-card('constantine heizenberg', 'support', 'Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec')
+      li.chefs-info-list-li.hidden
+        +chef-card('old freak', 'real gangster', 'Aenean sollicitudin, lorem quis bibendum nisi elit consequat ipsum nec')
   .chefs-photo
     .chefs-photo-container
       img(src='img/content/chef-photo-2.png')

@@ -1,0 +1,29 @@
+mixin recipe(num, heading, text)
+  a(href='#')
+    img(width="130" height="130" src='img/content/recipe-'+num+'.png')
+    h3 #{heading}
+    p #{text}
+    
+mixin comment(author, text)
+  case author
+    when 'Charlize Theron'
+      - var avatar = 2;
+      - var country = 'AU';
+    when 'Karen Gillan'
+      - var avatar = 1;
+      - var country = 'UK';
+  span.comments__mark &ldquo;
+  p.comments__text #{text}
+    .comments-author
+      img.comments-author__avatar(src='img/content/avatar-'+avatar+'.jpg')
+      span.comments-author__name #{author}, #{country}
+
+mixin tweet(author, text)
+  p.twitter__text #{text}
+  p.twitter__author #{author}
+  
+mixin chef-card(name, role, bio)
+  span.chefs__name #{name}
+  br
+  span.chefs__role &#91; #{role} &#93;
+  p.chefs__text #{bio}

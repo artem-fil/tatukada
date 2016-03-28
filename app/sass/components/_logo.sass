@@ -5,9 +5,7 @@
   border-top: 2px solid $color-brand-primary
   position: relative
   &:before
-    position: absolute
-    content: ""
-    display: block
+    +pseudo-pos
     +size(50%, 2px)
     background-color: $color-brand-secondary
     left: 0

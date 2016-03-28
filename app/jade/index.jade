@@ -1,3 +1,4 @@
+include _mixins
 doctype html
 html
   head
@@ -11,7 +12,7 @@ html
             include includes/_logo
           .cell-half
             include includes/_delivery
-        .col-3-4
+        .col-auto
           .cell
             include includes/_promo
       .row
@@ -20,7 +21,7 @@ html
             include includes/_offer
           .cell
             include includes/_video
-        .col-1-3
+        .col-auto
           .cell-half
             include includes/_reserve
           .cell
@@ -35,14 +36,14 @@ html
             include includes/_fb
           .cell-half
             include includes/_app
-        .col-1-2
+        .col-auto
           .cell
             include includes/_chefs
       .row
         .col-2-3
           .cell
-            include includes/_map
-        .col-1-3
+            include includes/_panorama
+        .col-auto
           .cell-half
             include includes/_newsletter
           .cell-half
@@ -51,23 +52,22 @@ html
         .col-1-4
           .cell
             include includes/_event
-        .col-3-4
+        .col-auto
           .cell
             include includes/_gallery
       .row
         .col-full
           .cell
-            include includes/_cap
+            include includes/_blog
       .row
         .col-1-2
-          .cell
-            include includes/_cap
-        .col-1-2
-          .cell
+          .cell-half
+            include includes/_map
+        .col-auto
+          .cell-half
             include includes/_feedback
       .row
         .col-full
-          .cell
-            p footer
+          .cell-small
             include includes/_footer
   

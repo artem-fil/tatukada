@@ -1,29 +1,28 @@
 .video
   background: black
   position: relative
+  overflow: hidden
   +size(100%)
   +flex-centering
   video
     width: 100%
+    margin-left: -1px
   &-overlay
     +size(100%)
     position: absolute
-    top: 0
     left: 0
-    background: linear-gradient(rgba(44, 44, 44, 0.55),rgba(44, 44, 44, 0.55)), url(../img/design/bg-video-cover.jpg) no-repeat center center
-    background-size: cover
+    top: 0
+    background: linear-gradient(rgba(44, 44, 44, 0.55),rgba(44, 44, 44, 0.55)), url(../img/design/bg-video-cover.jpg) no-repeat
+    background-size: 100% 100%
     +flex-centering
     text-align: center
   &__title
-    text-align: center
     text-transform: capitalize
     +text-l-heading
-  &__play
-    cursor: pointer
+  #play__btn
     display: inline-block
     +size(40px, 45px)
     margin-bottom: 30px
-    background: none
-    border: none
-    background: url(../img/design/sprite.png) no-repeat center center
+    +btn
+    background: url(../img/design/sprite.png) no-repeat
     background-position: -91px 0px

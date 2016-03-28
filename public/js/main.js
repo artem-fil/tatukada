@@ -1,11 +1,14 @@
 'use strict';
 
+
 $(function(){
+
+  $('.info').eq(1).hide();
 
   var $offerCtrlPrev = $('.offer-controls__btn').eq(0);
   var $offerCtrlNext = $('.offer-controls__btn').eq(1);
-  var $offerPhotos = $('.offer-image-list li');
-  var $offerTexts = $('.offer-text-list__item');
+  var $offerPhotos = $('.offer-image-list-li');
+  var $offerTexts = $('.offer-text-list-li');
   var numOffers = $offerPhotos.length;
   var prevOffer = numOffers-1;
   var currentOffer = 0;
@@ -50,7 +53,7 @@ $(function(){
   var $chefCtrlPrev = $('.chefs-controls__btn').eq(0);
   var $chefCtrlNext = $('.chefs-controls__btn').eq(1);
   var $chefsPhotos = $('.chefs-photo-container img');
-  var $chefsCards = $('#chefs-info-list li');
+  var $chefsCards = $('.chefs-info-list-li');
   var numChefs = $chefsPhotos.length;
   var prevChefImage = numChefs-1;
   var currentChefImage = 0;
@@ -88,6 +91,30 @@ $(function(){
     }
   });
 
+  var $tweetSlider = $('#tweet-slider');
+  var $tweets = $('.twitter-post-list-li');
+  var numTweets = $tweets.length;
+  var currentTweet = 1;
+  var $tweetButtons = $('.twitter-controls__btn');
+  var interval2;
+
+  function startTweetSlider(){
+    interval2 = setInterval(function(){
+      $tweetSlider.animate({'margin-left': '-='+100+'%'}, 800, function(){
+        currentTweet++;
+        $tweetButtons.eq(currentTweet-1).addClass('twitter-controls__btn--active');
+        $tweetButtons.eq(currentTweet-2).removeClass('twitter-controls__btn--active');
+        if(currentTweet === numTweets) {
+          currentTweet = 1;
+          $tweetButtons.eq(0).addClass('twitter-controls__btn--active');
+          $tweetSlider.css('margin-left', 0);
+        }
+      });
+    }, 6000);
+    state = true;
+  };
+
+  startTweetSlider();
 
   var width = 100;
   var animationSpeed = 1100;

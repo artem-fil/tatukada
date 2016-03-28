@@ -1,10 +1,16 @@
 .recipies
   +size(100%)
   background-color: $color-brand-primary
-  .wrapper
-    margin-right: 6px
-    height: 77%
+  &__title
+    +text-m-heading
+    text-transform: capitalize
+    text-align: center
+    line-height: 4em
+    height: 22%
+  &-list
+    margin: 0 6px 0 30px
     overflow-y: scroll
+    height: 78%
     &::-webkit-scrollbar
       width: 6px
       background-color: white
@@ -12,25 +18,23 @@
       border: 2px solid white
       outline: 2px solid white
       background-color: $color-brand-primary
-  &__title
-    +text-m-heading
-    text-transform: capitalize
-    text-align: center
-    line-height: 4em
-    height: 23%
-  ul
-    li
-      padding: 10px
-      height: 130px
+    &-li
+      min-height: 130px
+      margin-bottom: 10px
+      a
+        color: $color-text-primary
+        &:hover
+          transition-property: color
+          transition-duration: .25s
+          color: $color-text-alt
       img
         display: block
         float: left
       h3
-        font: 2.4em $font-family-paytone
-        overflow: hidden
+        +text-sm-heading
         padding-left: 10px
+        overflow: hidden
       p
-        padding-left: 10px
-        padding-right: 10px
         overflow: hidden
+        padding: 0 10px
         +text-regular

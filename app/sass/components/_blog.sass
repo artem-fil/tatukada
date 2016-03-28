@@ -1,0 +1,53 @@
+.blog
+  overflow: hidden
+  +size(100%)
+  +clearfix
+  a
+    cursor: pointer
+    color: $color-text-primary
+  &-post:last-child
+    float: none
+    overflow: hidden
+    width: auto
+  &-post
+    width: 33.33333%
+    float: left
+    height: 100%
+    position: relative
+    box-sizing: border-box
+    &:hover
+      border: 5px solid $color-brand-secondary
+    &-info
+      background: rgba($color-brand-secondary, .8)
+      position: absolute
+      bottom: 0
+      padding: 20px 0 20px 20px
+      display: none
+    &__heading
+      +text-sm-heading
+      margin-bottom: 5px
+    &__text
+      margin-bottom: 10px
+      width: 90%
+      +text-regular
+    &__link
+      cursor: pointer
+      position: relative
+      +text-common-link
+      +link-hover-effect
+      display: inline-block
+      padding-bottom: 5px
+      border-bottom: 2px solid $color-text-primary
+      text-transform: capitalize
+      margin-bottom: 15px
+    &:hover img
+      margin-left: -5px
+      margin-top: -5px
+    &:hover .blog-post-info
+      display: block
+      margin-left: -5px
+      margin-bottom: -5px
+    img
+      display: block
+      position: absolute
+      z-index: -1

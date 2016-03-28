@@ -11,9 +11,10 @@
     position: relative
     padding-left: 25px
     font: 2.8em/1em $font-family-paytone
+    a
+      color: $color-text-primary
     &:before
       +size(16px, 26px)
-      position: absolute
+      +pseudo-pos
       left: 0
-      content: ""
       background: url(../img/design/sprite.png) no-repeat -75px -1px

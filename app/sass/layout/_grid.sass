@@ -4,12 +4,7 @@
 
 .row
   +clearfix
-
   font-size: 0
-  & [class*="col-"]:last-child
-    float: none
-    overflow: hidden
-    width: auto
 
 [class*="col-"]
   float: left
@@ -28,6 +23,10 @@
   width: 50%
 .col-full
   width: 100%
+.col-auto
+  float: none
+  overflow: hidden
+  width: auto
 
 [class*="cell"]
   box-sizing: border-box
@@ -41,3 +40,5 @@
   +size(50%, $height-row-base / 2)
   display: inline-block
   vertical-align: top
+.cell-small
+  +size(100%, 80px)

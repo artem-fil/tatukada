@@ -1,4 +1,15 @@
 .twitter
-  .wrapper
-    p.twitter__text Aenean sollicitudin, lorem quis bibendum auctor nisi elit consequat
-    p.twitter__author Josette Doe
+  .twitter-post
+    ul#tweet-slider.twitter-post-list
+      li.twitter-post-list-li
+        +tweet('Josette Doe', 'Aenean sollicitudin, lorem quis bibendum auctor nisi elit consequat')
+      li.twitter-post-list-li
+        +tweet('Emma Watson', 'Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit uis sed')
+      li.twitter-post-list-li
+        +tweet('Charlize Theron', 'Aenean sollicitudin, lorem quis bibendum auctor nisi elit consequat')
+      li.twitter-post-list-li
+        +tweet('Josette Doe', 'Aenean sollicitudin, lorem quis bibendum auctor nisi elit consequat')
+  .twitter-controls
+    button.twitter-controls__btn.twitter-controls__btn--active
+    button.twitter-controls__btn
+    button.twitter-controls__btn

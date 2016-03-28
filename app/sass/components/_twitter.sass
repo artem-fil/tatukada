@@ -2,9 +2,32 @@
   +size(100%)
   background-color: $color-twitter-cyan
   +flex-centering
-  .wrapper
+  position: relative
+  &-post
     width: 85%
     margin-top: 2.3em
+    overflow: hidden
+    &-list
+      width: 400%
+      &-li
+        width: 25%
+        float: left
+
+  &-controls
+    position: absolute
+    bottom: 40px
+    left: 50%
+    transform: translate(-50%)
+    &__btn
+      +btn
+      cursor: default
+      border-radius: 50%
+      border: 1px solid $color-text-primary
+      +size(6px)
+      margin-right: 2px
+      &--active
+        transform: scale(1.5)
+        background-color: $color-text-primary
   &__text
     +text-regular
     margin-bottom: 2.3em

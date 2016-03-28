@@ -1,0 +1,42 @@
+.feedback
+  +size(100%)
+  +flex-centering
+  .wrapper
+    +size(90%, 80%)
+    position: relative
+  &__heading
+    +text-m-heading
+    color: $color-text-alt
+    text-transform: capitalize
+  &-form
+    width: 100%
+    position: absolute
+    bottom: 0
+    color: $color-text-alt
+    &__input
+      height: 40px
+      box-sizing: border-box
+      border: 1px solid #e1e1e1
+      line-height: 40px
+      padding-left: 15px
+      margin-bottom: 15px
+      color: $color-text-alt
+      width: 48%
+      +text-regular
+    &__textarea
+      border: 1px solid #e1e1e1
+      box-sizing: border-box
+      padding-left: 15px
+      margin-bottom: 15px
+      +size(100%, 100px)
+      +text-regular
+      resize: none
+    &__submit
+      +text-common-link
+      text-transform: capitalize
+      display: block
+      +btn
+      border-bottom: 2px solid $color-text-alt
+      padding-bottom: 5px
+      position: relative
+      +link-hover-effect
